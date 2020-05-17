@@ -21,12 +21,11 @@
 
 #include <SPI.h>
 #include <WiFiNINA.h>
+#include "secrets.h"
+String Name = ""; //TYPE THE NAME OF THE SITE YOU WANT TO CONNECT THE BOARD WITH
 int ID = 120;
 String GET = "GET /add.php?ID="; //GET /add.php?ID=100 HTTP/1.1
 String Send = GET + ID + " HTTP/1.1";
-
-char ssid[] = "AndroidAP"; //  your network SSID (name)
-char pass[] = "12345678";    // your network password (use for WPA, or use as key for WEP)
 int keyIndex = 0;            // your network key Index number (needed only for WEP)
 
 int status = WL_IDLE_STATUS;
